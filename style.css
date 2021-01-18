@@ -182,6 +182,11 @@ nav ul li {
   margin: 10px 0;
 }
 
+.links-highlight{
+  color: var(--low-red);
+  font-weight: 700;
+}
+
 .user {
   height: 36px;
   width: 112px;
