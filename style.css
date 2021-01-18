@@ -251,14 +251,14 @@ main {
   flex-direction: column;
   width: 100%;
   max-width: 335px;
-  margin-bottom: calc( var(--main-margin-top) / 2);
+  margin-bottom: 30px;
 }
 
-.items .content p span{
+.items .content .ps span{
   font-size: 18px;
 }
 
-.items .content p{
+.items .content .ps{
   font-size: 12px;
 }
 
