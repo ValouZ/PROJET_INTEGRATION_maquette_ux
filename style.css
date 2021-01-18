@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background: red;
+}
+
+.slider {
+    background: yellow;
+}
+
+.caroussel {
+    background: pink;
+}
+
+.discover {
+    background: green;
+}
+
+.items {
+    background: purple;
+}
+
+.opinion {
+    background: grey;
+}
+
+.team {
+    background: blue;
+}
