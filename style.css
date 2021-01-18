@@ -23,7 +23,12 @@ a:hover {
 }
 
 span {
-  font-weight: 800;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 20px;
+  font-weight: 600;
 }
 
 .button-on-image {
@@ -35,7 +40,7 @@ span {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   font-size: 18px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .button-classic {
@@ -46,7 +51,13 @@ span {
   border-radius: 6px;
   font-size: 18px;
   color: white;
-  font-weight: 800;
+  font-weight: 700;
+}
+
+.shadow-image {
+  border: 5px solid white;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
 }
 
 body {
@@ -164,9 +175,7 @@ header {
   margin-top: 33px;
   height: 220px;
   width: 100%;
-  border: 5px solid white;
-  border-radius: 4px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
+
   background: center center / cover url(img/caroussel_soiree.jpg);
 }
 
@@ -217,6 +226,7 @@ header {
 main {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 
 .discover {
@@ -254,11 +264,11 @@ main {
   margin-bottom: 30px;
 }
 
-.items .content .ps span{
+.items .content .ps span {
   font-size: 18px;
 }
 
-.items .content .ps{
+.items .content .ps {
   font-size: 12px;
 }
 
@@ -275,9 +285,6 @@ main {
 }
 
 .item-img {
-  border: 5px solid white;
-  border-radius: 4px;
-  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   width: 335px;
   height: 220px;
   position: relative;
@@ -310,4 +317,54 @@ main {
 
 .item .text .price {
   font-size: 18px;
+}
+
+.opinions {
+  margin-top: var(--main-margin-top);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 335px;
+}
+
+.opinions .users {
+  margin: 30px 0;
+  display: flex;
+  flex-direction: column;
+  height: 419px;
+  align-items: space-between;
+}
+
+.opinion .comment {
+  text-align: justify;
+}
+
+.opinion .user {
+  margin-top: 10px;
+  width: 100%;
+  font-weight: 700;
+}
+
+.team {
+  margin-top: var(--main-margin-top);
+  width: 335px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.team-image{
+  margin-top: 30px;
+  background: center center url(img/mobile/team_mobile.jpg);
+  width: 335px;
+  height: 220px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+}
+
+.team-image .button-on-image{
+  width: 183px;
+  position: absolute;
+  bottom: 10px;
 }
