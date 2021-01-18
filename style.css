@@ -21,6 +21,7 @@ a {
 
 a:hover {
   cursor: pointer;
+  color: var(--low-red);
 }
 
 span {
@@ -246,6 +247,7 @@ main {
 .discover h1 {
   font-size: 23px;
   font-weight: bold;
+  text-align: center;
 }
 
 .items {
