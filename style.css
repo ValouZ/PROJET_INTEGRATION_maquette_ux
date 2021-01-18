@@ -5,6 +5,10 @@
   font-family: 'Dosis', sans-serif;
 }
 
+body, footer, html, main{
+  min-width: 320px;
+}
+
 :root {
   --yellow: #FFC857;
   --low-red: #E85F5C;
@@ -60,6 +64,21 @@ h2 {
   border: 5px solid white;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
+}
+
+.text-highlight {
+  position: relative;
+}
+
+.text-highlight::after {
+  content: '';
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  left: 0;
+  bottom: -7px;
+  height: 16px;
+  background-color: var(--yellow);
 }
 
 body {
@@ -250,6 +269,11 @@ main {
   text-align: center;
 }
 
+.discover h1.text-highlight::after{
+  width: 245px;
+  left: calc(50% - calc(245px / 2));
+}
+
 .items {
   display: flex;
   flex-direction: column;
@@ -287,7 +311,7 @@ main {
 }
 
 .item-img {
-  width: 335px;
+  width: 100%;
   height: 220px;
   position: relative;
 }
@@ -326,7 +350,8 @@ main {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 335px;
+  max-width: 335px;
+  min-width: 320px;
 }
 
 .opinions .users {
@@ -349,20 +374,24 @@ main {
 
 .team {
   margin: var(--main-margin) 0;
-  width: 335px;
+  max-width: 335px;
+  min-width: 320px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .team h2 {
-  width: 340px;
+  width: calc(100% + 5px);
+  min-width: 320px;
+  max-width: 340px;
 }
 
 .team-image {
   margin-top: 30px;
   background: center center url(img/mobile/team_mobile.jpg);
-  width: 335px;
+  max-width: 335px;
+  min-width: 320px;
   height: 220px;
   position: relative;
   display: flex;
@@ -384,6 +413,7 @@ footer {
 
 footer hr {
   width: 100%;
+  min-width: 320px;
   border: 1px solid var(--grey);
 }
 
@@ -423,7 +453,8 @@ footer .join-us {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 335px;
+  max-width: 335px;
+  min-width: 320px;
   margin-bottom: var(--footer-margin);
 }
 
@@ -476,7 +507,7 @@ footer .subscribe .button-classic {
   width: 44px;
 }
 
-footer .help{
+footer .help {
   width: 217px;
   display: flex;
   flex-direction: column;
@@ -484,23 +515,23 @@ footer .help{
   margin-bottom: var(--footer-margin);
 }
 
-footer .help h3{
+footer .help h3 {
   margin-bottom: 5px;
 }
 
-footer .help .links{
+footer .help .links {
   display: flex;
   width: 100%;
   justify-content: space-between;
 }
 
 footer .help .left-links,
-footer .help .right-links{
+footer .help .right-links {
   display: flex;
   flex-direction: column;
 }
 
 footer .help .left-links a,
-footer .help .right-links a{
+footer .help .right-links a {
   margin-bottom: 7px;
 }
