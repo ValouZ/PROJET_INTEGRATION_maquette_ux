@@ -445,7 +445,7 @@ footer .newsletter .text {
   margin-bottom: 15px;
 }
 
-footer .newsletter h3 {
+footer h3 {
   font-weight: 400;
   font-size: 20px;
 }
@@ -461,7 +461,7 @@ footer .subscribe {
 }
 
 footer .subscribe input {
-  border: 1px solid var(--low-red);
+  border: 2px solid var(--low-red);
   padding-left: 12px;
   font-size: 18px;
   border-radius: 5px;
@@ -472,4 +472,33 @@ footer .subscribe input {
 footer .subscribe .button-classic {
   height: 100%;
   width: 44px;
+}
+
+footer .help{
+  width: 217px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: var(--footer-margin);
+}
+
+footer .help h3{
+  margin-bottom: 5px;
+}
+
+footer .help .links{
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+footer .help .left-links,
+footer .help .right-links{
+  display: flex;
+  flex-direction: column;
+}
+
+footer .help .left-links a,
+footer .help .right-links a{
+  margin-bottom: 7px;
 }
