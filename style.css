@@ -5,7 +5,10 @@
   font-family: 'Dosis', sans-serif;
 }
 
-body, footer, html, main{
+body,
+footer,
+html,
+main {
   min-width: 320px;
 }
 
@@ -16,6 +19,10 @@ body, footer, html, main{
   --main-margin: 60px;
   --footer-margin: 40px;
   font-size: 15px;
+}
+
+ul {
+  list-style: none;
 }
 
 a {
@@ -88,6 +95,7 @@ body {
 header {
   width: 100%;
   /* margin-top: 46px; */
+  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
 }
 
 .top-section {
@@ -106,27 +114,72 @@ header {
   justify-content: center;
 }
 
+.burger.display .icon {
+  background: unset;
+}
+
+.burger.display .icon::after {
+  transform: rotateZ(315deg);
+  top: 0;
+  background: var(--low-red);
+  transition: 0.3s linear;
+  transition-delay: 0.1s;
+}
+
+.burger.display .icon::before {
+  transform: rotateZ(-135deg);
+  top: 0;
+  background: var(--low-red);
+}
+
 .burger .icon {
   width: 35px;
   height: 4px;
   background: var(--grey);
   border-radius: 5px;
   position: relative;
+  transition: 0.2s linear;
 }
 
 .burger .icon::after,
 .burger .icon::before {
+  transition: 0.2s linear;
   content: '';
-  width: 100%;
+  width: 35px;
   height: 100%;
-  background: inherit;
+  background: var(--grey);
   border-radius: inherit;
   position: absolute;
+  left: 0;
   top: 9px;
 }
 
 .burger .icon::before {
   top: -9px;
+}
+
+.burger nav {
+  z-index: 5;
+  position: absolute;
+  top: 33px;
+  left: -220px;
+  background: white;
+  width: 200px;
+  transition: 0.3s ease-in;
+}
+
+.burger.display nav {
+  left: -13px;
+}
+
+nav ul {
+  padding-left: 10px;
+  margin: 15px 0;
+}
+
+nav ul li {
+  font-size: 18px;
+  margin: 10px 0;
 }
 
 .user {
@@ -151,7 +204,6 @@ header {
 .slider {
   height: 40px;
   background: var(--yellow);
-  box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.25);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -269,7 +321,7 @@ main {
   text-align: center;
 }
 
-.discover h1.text-highlight::after{
+.discover h1.text-highlight::after {
   width: 245px;
   left: calc(50% - calc(245px / 2));
 }
