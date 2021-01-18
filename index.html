@@ -7,7 +7,8 @@
   <link rel="stylesheet" href="style.css">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@400;500;700&display=swap" rel="stylesheet">
-  <title>Document</title>
+  <title>Pixagram - Accueil</title>
+  <link rel="shortcut icon" href="img/icon/favicon.svg" type="image/x-icon">
 </head>
 
 <body>
@@ -41,7 +42,7 @@
     <div class="caroussel-content">
 
       <div class="caroussel-buttons">
-        <div class="button previous-button">
+        <button class="button previous-button">
           <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0)">
               <path
@@ -56,8 +57,8 @@
             </defs>
           </svg>
 
-        </div>
-        <div class="button next-button">
+        </button>
+        <button class="button next-button">
           <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
             <g clip-path="url(#clip0)">
               <path
@@ -71,7 +72,7 @@
               </clipPath>
             </defs>
           </svg>
-        </div>
+        </button>
       </div>
 
       <div class="description">Rien de mieux que pour immortaliser toute vos soirées que notre programme de
@@ -80,15 +81,61 @@
       <button class="button-on-image">Y aller</button>
     </div>
   </section>
-  <section class="discover"></section>
-  <section class="items">
-    <article class="item"></article>
-    <article class="item"></article>
-    <article class="item"></article>
-    <article class="item"></article>
-  </section>
-  <section class="opinion"></section>
-  <section class="team"></section>
+  <main>
+    <section class="discover">
+      <div class="text">
+        <p>Venez découvrir nos nouveaux outils de conceptions</p>
+        <h1 class="text-highlight">- Ergonomique - Efficace - Interactif -</h1>
+      </div>
+      <button class="button-classic">Démonstration</button>
+    </section>
+    <section class="items">
+      <div class="content">
+        <div class="articles">
+          <article class="item">
+            <div class="item-img">
+              <img src="img/mobile/print_mobile.jpg" alt="Image de photos développées">
+            </div>
+            <div class="text">
+              <p>Tirages photos</p>
+              <p class="price">A partir de <span>0.20€ *</span></p>
+            </div>
+          </article>
+          <article class="item">
+            <div class="item-img">
+              <img src="img/mobile/calendar_mobile.jpg" alt="Image de d'un calendrier personalisé">
+            </div>
+            <div class="text">
+              <p>Calendriers photo</p>
+              <p class="price">A partir de <span>6.48€ *</span></p>
+            </div>
+          </article>
+          <article class="item">
+            <div class="item-img">
+              <img src="img/mobile/book_mobile.jpg" alt="Image d'un livre photo'">
+            </div>
+            <div class="text">
+              <p>Livres photo</p>
+              <p class="price">A partir de <span>29€ *</span></p>
+            </div>
+          </article>
+          <article class="item">
+            <div class="item-img">
+              <img src="img/mobile/canvas_mobile.jpg" alt="Image d'un tableau personalisé">
+            </div>
+            <div class="text">
+              <p>Toiles photo</p>
+              <p class="price">A partir de <span>33€ *</span></p>
+            </div>
+          </article>
+        </div>
+        <p><span>*</span> Hors frais de port et de traitement</p>
+      </div>
+      <button class="button-classic">Découvrir nos bons plans</button>
+    </section>
+    <section class="opinion"></section>
+    <section class="team"></section>
+  </main>
   <footer></footer>
 </body>
 
