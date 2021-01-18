@@ -21,13 +21,26 @@ a:hover {
   cursor: pointer;
 }
 
+.button-on-image {
+  width: 100px;
+  height: 35px;
+  background: #E85F5C;
+  color: white;
+  border: 2px solid #FFFFFF;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  font-size: 18px;
+  font-weight: 800;
+  line-height: 23px;
+}
+
 body {
   color: var(--grey);
 }
 
 header {
   width: 100%;
-  margin-top: 46px;
+  /* margin-top: 46px; */
 }
 
 .top-section {
@@ -104,6 +117,14 @@ header {
   position: relative;
 }
 
+.slider .content .display {
+  display: initial;
+}
+
+.slider .content :not(.display) {
+  display: none;
+}
+
 .slider .content::before,
 .slider .content::after {
   content: '';
@@ -114,7 +135,7 @@ header {
   left: -20px;
 }
 
-.slider .content::after{
+.slider .content::after {
   transform: rotateZ(180deg);
   right: -20px;
   left: unset;
@@ -131,21 +152,48 @@ header {
   border: 5px solid white;
   border-radius: 4px;
   box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.15);
-  background: center center url(img/mobile/carroussel_soiree_mobile.jpg);
+  background: center center / cover url(img/caroussel_soiree.jpg);
 }
 
-.discover {
-  background: green;
+.caroussel-content {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
 }
 
-.items {
-  background: purple;
+.caroussel-buttons{
+  position: absolute;
+  width: 100%;
+  height: 31px;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 3px;
+  top: 105.16px;
 }
 
-.opinion {
-  background: grey;
+.caroussel-buttons .button{
+  width: 31px;
+  height: 31px;
 }
 
-.team {
-  background: blue;
+.caroussel-content .description {
+  position: absolute;
+  top: calc(50% - calc(57px / 2));
+  text-align: center;
+  color: white;
+  width: 335px;
+  height: 57px;
+}
+
+.caroussel-content .description span {
+  font-weight: 800;
+  font-size: 28px;
+}
+
+.caroussel-content .button-on-image{
+  position: absolute;
+  top: 73.76%;
 }
