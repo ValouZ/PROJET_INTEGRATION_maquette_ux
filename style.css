@@ -44,7 +44,7 @@ h2 {
   font-weight: 700;
 }
 
-.button-on-image {
+.link-on-image {
   width: 100px;
   height: 35px;
   background: #E85F5C;
@@ -54,9 +54,12 @@ h2 {
   border-radius: 6px;
   font-size: 18px;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.button-classic {
+.link-classic {
   border: none;
   width: 191px;
   height: 40px;
@@ -65,6 +68,9 @@ h2 {
   font-size: 18px;
   color: white;
   font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .shadow-image {
@@ -173,7 +179,7 @@ header {
 }
 
 nav ul {
-  padding-left: 10px;
+  padding-left: 25px;
   margin: 15px 0;
 }
 
@@ -182,7 +188,11 @@ nav ul li {
   margin: 10px 0;
 }
 
-.links-highlight{
+.logo{
+  height: 35px;
+}
+
+.links-highlight {
   color: var(--low-red);
   font-weight: 700;
 }
@@ -295,7 +305,7 @@ nav ul li {
   font-size: 28px;
 }
 
-.caroussel-content .button-on-image {
+.caroussel-content .link-on-image {
   position: absolute;
   top: 73.76%;
 }
@@ -455,7 +465,7 @@ main {
   justify-content: center;
 }
 
-.team-image .button-on-image {
+.team-image .link-on-image {
   width: 183px;
   position: absolute;
   bottom: 10px;
@@ -551,7 +561,7 @@ footer .subscribe {
 }
 
 footer .subscribe input {
-  border: 2px solid var(--low-red);
+  border: 1px solid var(--low-red);
   padding-left: 12px;
   font-size: 18px;
   border-radius: 5px;
@@ -559,7 +569,7 @@ footer .subscribe input {
   height: 100%;
 }
 
-footer .subscribe .button-classic {
+footer .subscribe .link-classic {
   height: 100%;
   width: 44px;
 }
