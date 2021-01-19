@@ -13,15 +13,11 @@
 
 <body>
   <header>
-    <section class="top-section">
-      <section id="app-burger" class="burger">
+    <div class="top-section">
+      <div id="app-burger" class="burger">
         <div class="icon">
           <nav>
-
             <ul>
-              <li>
-                <a href="#"><img class="logo" src="img/icon/full-name.svg" alt="Logo du site"></a>
-              </li>
               <li><a href="#">Livres Photo</a></li>
               <li><a href="#">Déco Photo</a></li>
               <li><a href="#">Tirages Photo</a></li>
@@ -32,74 +28,84 @@
             </ul>
           </nav>
         </div>
-      </section>
-      <section class="user">
-        <a href="#" class="account">
-          <img src="img/icon/user.svg" alt="Icone utilisateur">
-          Mon compte
+      </div>
+      <div class="upper-menu-desktop">
+        <a href="#">
+          <img class="logo" src="img/icon/full-name.svg" alt="Pixagram">
         </a>
-        <a href="#" class="basket">
-          <img src="img/icon/basket.svg" alt="Icone de panier">
-          Panier
-        </a>
-      </section>
-    </section>
+        <nav class="user">
+          <h1>
+            <a href="#" class="account">
+              <img src="img/icon/user.svg" alt="Icone utilisateur">
+              Mon compte
+            </a>
+          </h1>
+          <a href="#" class="basket">
+            <img src="img/icon/basket.svg" alt="Icone de panier">
+            Panier
+          </a>
+        </nav>
+      </div>
+    </div>
     <section class="slider">
       <div class="content">
-        <a class="" href="#">Rencontrez nos utilisateurs sur notre blog</a>
-        <a class="display" href="#">Programme de fidélité</a>
+        <a class="display" href="#">Rencontrez nos utilisateurs sur notre blog</a>
+        <a class="" href="#">Programme de fidélité</a>
         <a class="" href="#">Promotion du moment</a>
       </div>
     </section>
   </header>
-  <section class="caroussel shadow-image">
-    <div class="caroussel-content">
-
-      <div class="caroussel-buttons">
-        <button class="button previous-button">
-          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0)">
-              <path
-                d="M15.0839 1.15357C7.29066 1.15357 0.972984 7.61133 0.972984 15.5774C0.972983 23.5435 7.29066 30.0012 15.0839 30.0012C22.8771 30.0012 29.1948 23.5435 29.1948 15.5774C29.1948 7.61134 22.8772 1.15357 15.0839 1.15357Z"
-                stroke="white" />
-              <path d="M16.8931 19.2759L13.2749 15.5775L16.8931 11.879" stroke="white" stroke-width="2" />
-            </g>
-            <defs>
-              <clipPath id="clip0">
-                <rect width="30.1681" height="30.837" fill="white" transform="translate(30.168 30.9958) rotate(-180)" />
-              </clipPath>
-            </defs>
-          </svg>
-
-        </button>
-        <button class="button next-button">
-          <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <g clip-path="url(#clip0)">
-              <path
-                d="M15.9159 30.001C23.7091 30.001 30.0268 23.5432 30.0268 15.5771C30.0268 7.61109 23.7091 1.15332 15.9159 1.15332C8.12261 1.15332 1.80493 7.61109 1.80493 15.5771C1.80493 23.5432 8.12261 30.001 15.9159 30.001Z"
-                stroke="white" />
-              <path d="M14.1067 11.8787L17.7249 15.5771L14.1067 19.2755" stroke="white" stroke-width="2" />
-            </g>
-            <defs>
-              <clipPath id="clip0">
-                <rect width="30.1681" height="30.837" fill="white" transform="translate(0.831787 0.158691)" />
-              </clipPath>
-            </defs>
-          </svg>
-        </button>
-      </div>
-
-      <div class="description">Rien de mieux que pour immortaliser toute vos soirées que notre programme de
-        <span>fidélité</span>
-      </div>
-      <a class="link-on-image">Y aller</a>
-    </div>
-  </section>
+  <!-- voir pour pseudo class sur nav -->
+  <div id="app-filter" class="filter"></div>
   <main>
+    <section class="caroussel shadow-image">
+      <div class="caroussel-content">
+
+        <div class="caroussel-buttons">
+          <button class="button previous-button">
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0)">
+                <path
+                  d="M15.0839 1.15357C7.29066 1.15357 0.972984 7.61133 0.972984 15.5774C0.972983 23.5435 7.29066 30.0012 15.0839 30.0012C22.8771 30.0012 29.1948 23.5435 29.1948 15.5774C29.1948 7.61134 22.8772 1.15357 15.0839 1.15357Z"
+                  stroke="white" />
+                <path d="M16.8931 19.2759L13.2749 15.5775L16.8931 11.879" stroke="white" stroke-width="2" />
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="30.1681" height="30.837" fill="white"
+                    transform="translate(30.168 30.9958) rotate(-180)" />
+                </clipPath>
+              </defs>
+            </svg>
+
+          </button>
+          <button class="button next-button">
+            <svg width="31" height="31" viewBox="0 0 31 31" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <g clip-path="url(#clip0)">
+                <path
+                  d="M15.9159 30.001C23.7091 30.001 30.0268 23.5432 30.0268 15.5771C30.0268 7.61109 23.7091 1.15332 15.9159 1.15332C8.12261 1.15332 1.80493 7.61109 1.80493 15.5771C1.80493 23.5432 8.12261 30.001 15.9159 30.001Z"
+                  stroke="white" />
+                <path d="M14.1067 11.8787L17.7249 15.5771L14.1067 19.2755" stroke="white" stroke-width="2" />
+              </g>
+              <defs>
+                <clipPath id="clip0">
+                  <rect width="30.1681" height="30.837" fill="white" transform="translate(0.831787 0.158691)" />
+                </clipPath>
+              </defs>
+            </svg>
+          </button>
+        </div>
+
+        <div class="description">Rien de mieux que pour immortaliser toute vos soirées que notre programme de
+          <span>fidélité</span>
+        </div>
+        <a class="link-on-image">Y aller</a>
+      </div>
+    </section>
     <section class="discover">
       <div class="text">
         <p>Venez découvrir nos nouveaux outils de conceptions</p>
-        <h1 class="text-highlight">- Ergonomique - Efficace - Interactif -</h1>
+        <h3 class="text-highlight">- Ergonomique - Efficace - Interactif -</h3>
       </div>
       <a class="link-classic">Démonstration</a>
     </section>
@@ -111,7 +117,7 @@
               <img src="img/mobile/print_mobile.jpg" alt="Image de photos développées">
             </div>
             <div class="text">
-              <p>Tirages photos</p>
+              <h2>Tirages photos</h2>
               <p class="price">A partir de <span>0.20€ *</span></p>
             </div>
           </article>
@@ -120,7 +126,7 @@
               <img src="img/mobile/calendar_mobile.jpg" alt="Image de d'un calendrier personalisé">
             </div>
             <div class="text">
-              <p>Calendriers photo</p>
+              <h2>Calendriers photo</h2>
               <p class="price">A partir de <span>6.48€ *</span></p>
             </div>
           </article>
@@ -129,7 +135,7 @@
               <img src="img/mobile/book_mobile.jpg" alt="Image d'un livre photo'">
             </div>
             <div class="text">
-              <p>Livres photo</p>
+              <h2>Livres photo</h2>
               <p class="price">A partir de <span>29€ *</span></p>
             </div>
           </article>
@@ -138,7 +144,7 @@
               <img src="img/mobile/canvas_mobile.jpg" alt="Image d'un tableau personalisé">
             </div>
             <div class="text">
-              <p>Toiles photo</p>
+              <h2>Toiles photo</h2>
               <p class="price">A partir de <span>33€ *</span></p>
             </div>
           </article>
@@ -148,7 +154,7 @@
       <a class="link-classic">Découvrir nos bons plans</a>
     </section>
     <section class="opinions">
-      <h2 class="text-highlight">Ce que nos clients pensent</h2>
+      <h3 class="text-highlight">Ce que nos clients pensent</h3>
       <section class="users">
         <article class="opinion">
           <p class="comment">Des prestations toujours excellentes en termes de produits, de choix, de régularité dans
@@ -176,7 +182,7 @@
       <a class="link-classic">Consulter les avis</a>
     </section>
     <section class="team">
-      <h2 class="text-highlight">Notre équipe engagée dans votre bonheur</h2>
+      <h3 class="text-highlight">Notre équipe engagée dans votre bonheur</h3>
       <div class="team-image shadow-image">
         <a class="link-on-image">Qui sommes nous ?</a>
       </div>
@@ -201,7 +207,7 @@
     <hr>
     <section class="bottom-footer">
       <section class="join-us">
-        <h2>Rejoignez-nous</h2>
+        <h3>Rejoignez-nous</h3>
         <div class="social">
           <img src="img/icon/twitter.svg" alt="Icone de twitter">
           <img src="img/icon/insta.svg" alt="Icone de instagram">
@@ -209,21 +215,23 @@
           <img src="img/icon/blog.svg" alt="Icone menantau blog du site">
         </div>
       </section>
-      <a class="avis-verif" href="#">
-        <img src="img/avisVerifies.png" alt="Image du site répertoriants les avis">
-      </a>
-      <section class="newsletter">
-        <div class="text">
-          <h3>Restez au courant de l'actualité</h3>
-          <p>Inscrivez vous à la newsletter Pixagram</p>
-        </div>
-        <div class="subscribe">
-          <input type="email" placeholder="john.doe@icloud.com">
-          <a class="link-classic">OK</a>
-        </div>
-      </section>
+      <div class="column-desktop">
+        <a class="avis-verif" href="#">
+          <img src="img/avisVerifies.png" alt="Image du site répertoriants les avis">
+        </a>
+        <section class="newsletter">
+          <div class="text">
+            <h4>Restez au courant de l'actualité</h4>
+            <p>Inscrivez vous à la newsletter Pixagram</p>
+          </div>
+          <div class="subscribe">
+            <input type="email" placeholder="john.doe@icloud.com">
+            <button class="button-classic">OK</button>
+          </div>
+        </section>
+      </div>
       <section class="help">
-        <h3>Besoin d'aide ?</h3>
+        <h4>Besoin d'aide ?</h4>
         <section class="links">
           <div class="left-links">
             <a href="#">Questions fréquentes</a>
