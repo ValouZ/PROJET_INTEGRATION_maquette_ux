@@ -1,36 +1,36 @@
 @font-face {
-  font-family: 'Dosis Regular';
+  font-family: "Dosis Regular";
   font-style: normal;
   font-weight: 400;
-  src: local('Dosis Regular'), url("fonts/Dosis-Regular.woff") format("woff");
+  src: local("Dosis Regular"), url("fonts/Dosis-Regular.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Dosis Medium';
+  font-family: "Dosis Medium";
   font-style: normal;
   font-weight: 500;
-  src: local('Dosis Medium'), url("fonts/Dosis-Medium.woff") format("woff");
+  src: local("Dosis Medium"), url("fonts/Dosis-Medium.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Dosis SemiBold';
+  font-family: "Dosis SemiBold";
   font-style: normal;
   font-weight: 600;
-  src: local('Dosis SemiBold'), url("fonts/Dosis-SemiBold.woff") format("woff");
+  src: local("Dosis SemiBold"), url("fonts/Dosis-SemiBold.woff") format("woff");
 }
 
 @font-face {
-  font-family: 'Dosis Bold';
+  font-family: "Dosis Bold";
   font-style: normal;
   font-weight: 700;
-  src: local('Dosis Bold'), url("fonts/Dosis-Bold.woff") format("woff");
+  src: local("Dosis Bold"), url("fonts/Dosis-Bold.woff") format("woff");
 }
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Dosis Regular', sans-serif;
+  font-family: "Dosis Regular", sans-serif;
 }
 
 body,
@@ -41,16 +41,16 @@ main {
 }
 
 :root {
-  --yellow: #FFC857;
-  --low-red: #E85F5C;
+  --yellow: #ffc857;
+  --low-red: #e85f5c;
   --grey: #323031;
   --main-margin: 60px;
   --footer-margin: 40px;
   font-size: 15px;
-  --regular: 'Dosis Regular', sans-serif;
-  --medium: 'Dosis Medium', sans-serif;
-  --semibold: 'Dosis SemiBold', sans-serif;
-  --bold: 'Dosis Bold', sans-serif;
+  --regular: "Dosis Regular", sans-serif;
+  --medium: "Dosis Medium", sans-serif;
+  --semibold: "Dosis SemiBold", sans-serif;
+  --bold: "Dosis Bold", sans-serif;
 }
 
 ul {
@@ -85,7 +85,7 @@ h3 {
   height: 35px;
   background: var(--low-red);
   color: white;
-  border: 2px solid #FFFFFF;
+  border: 2px solid #ffffff;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   font-size: 18px;
@@ -94,6 +94,7 @@ h3 {
   align-items: center;
   justify-content: center;
   transition: 0.2s linear;
+  transition-property: color, background;
 }
 
 .link-on-image:hover,
@@ -117,6 +118,7 @@ h3 {
   align-items: center;
   justify-content: center;
   transition: 0.2s linear;
+  transition-property: color, background;
 }
 
 .shadow-image {
@@ -130,7 +132,7 @@ h3 {
 }
 
 .text-highlight::after {
-  content: '';
+  content: "";
   width: 100%;
   position: absolute;
   z-index: -1;
@@ -178,6 +180,8 @@ header {
   background: var(--low-red);
   transition: 0.3s linear;
   transition-delay: 0.1s;
+  transition-property: background, transform;
+  
 }
 
 .burger.display .icon::before {
@@ -193,12 +197,14 @@ header {
   border-radius: 5px;
   position: relative;
   transition: 0.2s linear;
+  transition-property: background;
 }
 
 .burger .icon::after,
 .burger .icon::before {
   transition: 0.2s linear;
-  content: '';
+  transition-property: background, transform;
+  content: "";
   width: 35px;
   height: 100%;
   background: var(--grey);
@@ -220,6 +226,7 @@ header {
   background: white;
   width: 200px;
   transition: 0.3s ease-in;
+  transition-property: left;
   border-radius: 0 0 10px 0;
 }
 
@@ -244,7 +251,6 @@ nav ul li {
   height: 100%;
   z-index: 2;
   background: rgba(0, 0, 0, 0.4);
-  transition: 0.3s ease-in;
 }
 
 .filter.display {
@@ -305,6 +311,7 @@ nav.user {
   width: 300vw;
   position: relative;
   transition: 0.5s linear;
+  transition-property: transform;
 }
 
 .slider .content .slide {
@@ -328,15 +335,16 @@ nav.user {
   overflow: hidden;
 }
 
-.slider-caroussel .slides {
+.slides {
   height: 100%;
   display: flex;
   width: 200%;
   position: relative;
   transition: 0.5s linear;
+  transition-property: transform;
 }
 
-.slider-caroussel .slides .slide {
+.slides .slide {
   width: 50%;
   height: 100%;
   display: flex;
@@ -346,7 +354,7 @@ nav.user {
   position: relative;
 }
 
-.slider-caroussel .slides .slide img {
+.slides .slide img {
   width: 100%;
   height: 100%;
   object-fit: cover;
@@ -478,19 +486,39 @@ main {
 }
 
 .print {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/print_mobile.webp);
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 52.6%,
+      #ffffff 100%
+    ),
+    center center / cover url(img/mobile/print_mobile.webp);
 }
 
 .calendar {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/calendar_mobile.webp);
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 52.6%,
+      #ffffff 100%
+    ),
+    center center / cover url(img/mobile/calendar_mobile.webp);
 }
 
 .book {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/book_mobile.webp);
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 52.6%,
+      #ffffff 100%
+    ),
+    center center / cover url(img/mobile/book_mobile.webp);
 }
 
 .canvas {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/canvas_mobile.webp);
+  background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0) 52.6%,
+      #ffffff 100%
+    ),
+    center center / cover url(img/mobile/canvas_mobile.webp);
 }
 
 .item .text {
@@ -615,13 +643,13 @@ footer .values .value {
   font-family: var(--semibold);
 }
 
-footer .values .value img {
+.values .value img {
   width: 35px;
   height: 35px;
   margin-right: 11px;
 }
 
-footer .values .value span {
+.values .value span {
   color: var(--low-red);
   font-family: var(--semibold);
 }
@@ -649,7 +677,7 @@ footer .join-us .social {
   justify-content: space-between;
 }
 
-footer .join-us .social img {
+.join-us .social img {
   width: 60px;
   height: 60px;
 }
@@ -727,15 +755,14 @@ footer .help .right-links {
   flex-direction: column;
 }
 
-footer .help .left-links a,
-footer .help .right-links a {
+.help .left-links a,
+.help .right-links a {
   margin-bottom: 7px;
 }
 
 .more-of-us {
   display: none;
 }
-
 
 /* Small Devices, Tablets */
 
@@ -817,11 +844,10 @@ footer .help .right-links a {
   }
 }
 
-
 /* Medium Devices, Desktops */
 
 @media only screen and (min-width: 992px) {
-   :root {
+  :root {
     --main-margin: 100px;
   }
   h3 {
@@ -834,7 +860,7 @@ footer .help .right-links a {
     width: 222px;
     height: 57px;
     font-size: 30px;
-    border: 3px solid #FFFFFF;
+    border: 3px solid #ffffff;
   }
   .link-classic,
   .button-classic {
@@ -1031,19 +1057,39 @@ footer .help .right-links a {
     height: 100%;
   }
   .print {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/desktop/print_desktop.jpg);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 52.6%,
+        #ffffff 100%
+      ),
+      center center / cover url(img/desktop/print_desktop.jpg);
   }
   .calendar {
     grid-column: 2 / span 1;
     grid-row: 1 / span 2;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/desktop/calendar_desktop.jpg);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 52.6%,
+        #ffffff 100%
+      ),
+      center center / cover url(img/desktop/calendar_desktop.jpg);
   }
   .book {
     grid-row: 2 / span 2;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/desktop/book_desktop.jpg);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 52.6%,
+        #ffffff 100%
+      ),
+      center center / cover url(img/desktop/book_desktop.jpg);
   }
   .canvas {
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/desktop/canvas_desktop.jpg);
+    background: linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0) 52.6%,
+        #ffffff 100%
+      ),
+      center center / cover url(img/desktop/canvas_desktop.jpg);
   }
   .item .text {
     z-index: 2;
@@ -1184,7 +1230,6 @@ footer .help .right-links a {
   }
 }
 
-
 /* center "Voir" button */
 
 @media only screen and (min-width: 1080px) {
@@ -1192,7 +1237,6 @@ footer .help .right-links a {
     left: calc(50% - calc(120px / 2));
   }
 }
-
 
 /* Large Devices, Wide Screens */
 
