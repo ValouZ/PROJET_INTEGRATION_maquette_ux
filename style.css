@@ -476,19 +476,19 @@ main {
 }
 
 .print {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/print_mobile.jpg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/print_mobile.webp);
 }
 
 .calendar {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/calendar_mobile.jpg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/calendar_mobile.webp);
 }
 
 .book {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/book_mobile.jpg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/book_mobile.webp);
 }
 
 .canvas {
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/canvas_mobile.jpg);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/canvas_mobile.webp);
 }
 
 .item .text {
@@ -570,7 +570,7 @@ main {
 
 .team-image {
   margin-top: 30px;
-  background: center center url(img/mobile/team_mobile.jpg);
+  background: center center url(img/mobile/team_mobile.webp);
   width: 100%;
   height: 220px;
   position: relative;
