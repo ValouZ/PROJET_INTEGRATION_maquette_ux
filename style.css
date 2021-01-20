@@ -1,28 +1,28 @@
 @font-face {
   font-family: 'Dosis Regular';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 400;
   src: local('Dosis Regular'), url("fonts/Dosis-Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Dosis Medium';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 500;
   src: local('Dosis Medium'), url("fonts/Dosis-Medium.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Dosis SemiBold';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 600;
   src: local('Dosis SemiBold'), url("fonts/Dosis-SemiBold.woff") format("woff");
 }
 
 @font-face {
   font-family: 'Dosis Bold';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 700;
   src: local('Dosis Bold'), url("fonts/Dosis-Bold.woff") format("woff");
 }
 
@@ -425,6 +425,7 @@ main {
 .discover h3.text-highlight::after {
   width: 245px;
   left: calc(50% - calc(245px / 2));
+  bottom: -3px;
 }
 
 .discover .desktop-display {
@@ -558,6 +559,7 @@ main {
 .team {
   margin: var(--main-margin) 0;
   max-width: 335px;
+  width: 100%;
   min-width: 320px;
   display: flex;
   flex-direction: column;
@@ -739,6 +741,7 @@ footer .help .right-links a {
   }
   .text-highlight::after {
     height: 22px;
+    bottom: -8px;
   }
   .link-on-image {
     width: 222px;
@@ -782,6 +785,7 @@ footer .help .right-links a {
   .discover h3.text-highlight::after {
     width: 310px;
     left: calc(50% - calc(310px / 2));
+    bottom: -8px;
   }
   .team {
     max-width: 1068px;
