@@ -1013,7 +1013,7 @@ footer .help .right-links a {
     opacity: 1;
     top: unset;
     bottom: 17px;
-    left: calc(50% - calc(120px / 2));
+    left: calc(70% - calc(120px / 2));
     width: 120px;
     height: 45px;
   }
@@ -1135,6 +1135,13 @@ footer .help .right-links a {
     margin: 0 5px;
   }
 }
+
+/* center "Voir" button */
+@media only screen and (min-width: 1080px){
+  .item .link-on-image{
+    left: calc(50% - calc(120px / 2));
+  }
+} 
 
 
 /* Large Devices, Wide Screens */
