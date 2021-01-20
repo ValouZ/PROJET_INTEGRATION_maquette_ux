@@ -352,21 +352,9 @@ nav.user {
   object-fit: cover;
 }
 
-.caroussel-content {
-  position: absolute;
-  left: 0;
-  top: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  height: 100%;
-}
-
 .caroussel-buttons {
   position: absolute;
-  width: 95%;
+  width: 100%;
   height: 31px;
   /* max-height: 73px; */
   display: flex;
@@ -393,8 +381,8 @@ nav.user {
 
 .slider-caroussel .description.dark {
   color: var(--grey);
-  top: 27px;
-  right: 5%;
+  top: 10px;
+  right: 3%;
   max-width: 247px;
 }
 
@@ -406,7 +394,8 @@ nav.user {
   color: var(--low-red);
 }
 
-.caroussel-content .link-on-image {
+.slider-caroussel .link-on-image {
+  z-index: 2;
   position: absolute;
   top: 73.76%;
 }
@@ -932,6 +921,10 @@ footer .help .right-links a {
   .slider .content .slide {
     padding: calc(calc(40px - 22px) / 2) 0;
   }
+  .slider-caroussel .description.dark {
+    top: 27px;
+    right: 5%;
+  }
   .caroussel-buttons {
     height: 80px;
     top: calc(50% - calc(80px / 2));
@@ -1217,7 +1210,7 @@ footer .help .right-links a {
   .slider-caroussel .description span {
     font-size: 72px;
   }
-  .caroussel-content .link-on-image {
+  .slider-caroussel .link-on-image {
     top: unset;
     bottom: 47px;
   }
