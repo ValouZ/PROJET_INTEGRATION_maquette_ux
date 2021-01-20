@@ -415,6 +415,10 @@ main {
   left: calc(50% - calc(245px / 2));
 }
 
+.discover .desktop-display {
+  display: none;
+}
+
 .items {
   display: flex;
   flex-direction: column;
@@ -653,6 +657,7 @@ footer .newsletter .text {
 
 footer h4 {
   font-family: var(--regular);
+  font-weight: 400;
   font-size: 20px;
 }
 
@@ -806,6 +811,7 @@ footer .help .right-links a {
     width: 222px;
     height: 57px;
     font-size: 30px;
+    border: 3px solid #FFFFFF;
   }
   .link-classic,
   .button-classic {
@@ -885,6 +891,10 @@ footer .help .right-links a {
     width: 80px;
     height: 80px;
   }
+  .discover {
+    width: 90%;
+    max-width: 1240px;
+  }
   .discover .text {
     margin-bottom: 30px;
   }
@@ -900,6 +910,54 @@ footer .help .right-links a {
   }
   .discover .link-classic {
     display: none;
+  }
+  .discover .desktop-display {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 8px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    height: 574px;
+    width: 100%;
+  }
+  .blog {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: center center / cover url(img/desktop/blog_desktop.jpg);
+    grid-column: 1 / span 1;
+    grid-row: 1 / span 1;
+  }
+  .gift {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: center center / cover url(img/desktop/gift_desktop.jpg);
+    grid-column: 1 / span 1;
+    grid-row: 2 / span 1;
+  }
+  .demonstration {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    background: center center / cover url(img/desktop/demo_desktop.jpg);
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+  }
+  .blog .link-on-image,
+  .gift .link-on-image,
+  .demonstration .link-on-image {
+    position: absolute;
+    bottom: 17px;
+  }
+  .blog .link-on-image {
+    width: 130px;
+  }
+  .demonstration p {
+    text-align: center;
+    position: absolute;
+    top: 17px;
+    font-size: 25px;
   }
   .items {
     width: 90%;
@@ -917,7 +975,7 @@ footer .help .right-links a {
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 0.33fr 1fr;
     height: 969px;
-    max-width: 1240px;
+    width: 100%;
   }
   .item {
     position: relative;
@@ -938,6 +996,9 @@ footer .help .right-links a {
   }
   .canvas {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/desktop/canvas_desktop.jpg);
+  }
+  .item .text{
+    z-index: 2;
   }
   .item .text h2 {
     font-size: 18px;
@@ -1024,7 +1085,6 @@ footer .help .right-links a {
     margin-bottom: 15px;
   }
   footer h4 {
-    font-family: var(--bold);
     font-size: 26px;
   }
   footer .newsletter p {
