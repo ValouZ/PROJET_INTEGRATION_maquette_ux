@@ -307,7 +307,7 @@ nav.user {
   height: 220px;
   width: 100%;
   max-width: 1364px;
-  background: center center / cover url(img/caroussel_soiree_desktop.jpg);
+  background: center center / cover url(img/desktop/caroussel_soiree_desktop.jpg);
 }
 
 .caroussel-content {
@@ -389,13 +389,15 @@ main {
   justify-content: center;
   align-items: center;
   margin-top: var(--main-margin);
+  width: 100%;
+  max-width: 335px;
 }
 
 .items .content {
   display: flex;
   flex-direction: column;
+  align-items: center;
   width: 100%;
-  max-width: 335px;
   margin-bottom: 30px;
 }
 
@@ -412,32 +414,30 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
+  width: 100%;
   height: 1027px;
 }
 
 .item {
   position: relative;
-}
-
-.item-img {
   width: 100%;
   height: 220px;
-  position: relative;
 }
 
-.item-img::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%);
+.print {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/print_mobile.jpg);
 }
 
-.item-img img {
-  width: 100%;
-  height: 100%;
+.calendar {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/calendar_mobile.jpg);
+}
+
+.book {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/book_mobile.jpg);
+}
+
+.canvas {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/mobile/canvas_mobile.jpg);
 }
 
 .item .text {
@@ -457,6 +457,21 @@ main {
 
 .item .text .price {
   font-size: 18px;
+}
+
+.item .link-on-image {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.item .link-on-image:hover {
+  opacity: 0.5;
+  background: var(--low-red);
+  color: white;
 }
 
 .opinions {
@@ -739,7 +754,7 @@ footer .help .right-links a {
     max-width: unset;
   }
   .team-image {
-    background: center center / cover url(img/team.jpg);
+    background: center center / cover url(img/desktop/team_desktop.jpg);
     max-width: 1068px;
     width: 100%;
     height: 496px;
@@ -858,10 +873,71 @@ footer .help .right-links a {
     width: 467px;
     left: calc(50% - calc(467px / 2));
   }
+  .discover .link-classic {
+    display: none;
+  }
+  .items {
+    width: 90%;
+    max-width: 1240px;
+  }
+  .items .content {
+    width: 100%;
+    max-width: unset;
+    margin-bottom: 30px;
+  }
+  .items .content .articles {
+    display: grid;
+    column-gap: 10px;
+    row-gap: 26px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 0.33fr 1fr;
+    height: 969px;
+    max-width: 1240px;
+  }
+  .item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+  }
+  .print {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/desktop/print_desktop.jpg);
+  }
+  .calendar {
+    grid-column: 2 / span 1;
+    grid-row: 1 / span 2;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/desktop/calendar_desktop.jpg);
+  }
+  .book {
+    grid-row: 2 / span 2;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/desktop/book_desktop.jpg);
+  }
+  .canvas {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/desktop/canvas_desktop.jpg);
+  }
+  .item .text h2 {
+    font-size: 18px;
+  }
+  .item .text .price {
+    font-size: 22px;
+  }
   .items .content .ps span {
     font-size: 22px;
   }
+  .item .link-on-image {
+    opacity: 1;
+    top: unset;
+    bottom: 17px;
+    left: calc(50% - calc(120px / 2));
+    width: 120px;
+    height: 45px;
+  }
+  .item .link-on-image:hover {
+    opacity: 1;
+    background:#eeeeee;
+    color: var(--low-red);
+  }
   .items .content .ps {
+    align-self: flex-start;
     font-size: 15px;
   }
   .opinions {
@@ -963,15 +1039,14 @@ footer .help .right-links a {
     /* width: 100%; */
     max-width: 1364px;
   }
-
-  .more-of-us ul{
+  .more-of-us ul {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
     font-size: 16px;
   }
-  .more-of-us ul li{
+  .more-of-us ul li {
     margin: 0 5px;
   }
 }
@@ -1016,5 +1091,4 @@ footer .help .right-links a {
   footer .help h4 {
     align-self: flex-start;
   }
-  
 }
