@@ -5,7 +5,7 @@ const filter = document.getElementById("app-filter");
 const slides = document.getElementsByClassName("content")[0];
 const linksSlides = slides.children;
 let numberOfLinksSlides = linksSlides.length;
-let sliderCounter = -1;
+let sliderCounter = 0;
 
 // Event listener used to display the content of the burger menu
 // if the window is under 992px of width, we add the event listener 
