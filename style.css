@@ -1,8 +1,36 @@
+@font-face {
+  font-family: 'Dosis Regular';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dosis Regular'), url("fonts/Dosis-Regular.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Dosis Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dosis Medium'), url("fonts/Dosis-Medium.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Dosis SemiBold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dosis SemiBold'), url("fonts/Dosis-SemiBold.woff") format("woff");
+}
+
+@font-face {
+  font-family: 'Dosis Bold';
+  font-style: normal;
+  font-weight: normal;
+  src: local('Dosis Bold'), url("fonts/Dosis-Bold.woff") format("woff");
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Dosis', sans-serif;
+  font-family: 'Dosis Regular', sans-serif;
 }
 
 body,
@@ -19,6 +47,11 @@ main {
   --main-margin: 60px;
   --footer-margin: 40px;
   font-size: 15px;
+  --regular: 'Dosis Regular', sans-serif;
+  --medium: 'Dosis Medium', sans-serif;
+  --semibold: 'Dosis SemiBold', sans-serif;
+  --bold: 'Dosis Bold', sans-serif;
+  
 }
 
 ul {
@@ -40,12 +73,12 @@ button:hover {
 }
 
 span {
-  font-weight: 700;
+  font-family: var(--bold);
 }
 
 h3 {
   font-size: 20px;
-  font-weight: 700;
+  font-family: var(--bold);
 }
 
 .link-on-image {
@@ -57,7 +90,7 @@ h3 {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
   border-radius: 6px;
   font-size: 18px;
-  font-weight: 700;
+  font-family: var(--bold);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -80,7 +113,7 @@ h3 {
   border-radius: 6px;
   font-size: 18px;
   color: white;
-  font-weight: 700;
+  font-family: var(--bold);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -237,7 +270,7 @@ nav ul li {
 
 .links-highlight {
   color: var(--low-red);
-  font-weight: 700;
+  font-family: var(--bold);
 }
 
 nav.user {
@@ -251,12 +284,12 @@ nav.user {
 .basket {
   display: flex;
   flex-direction: column;
-  font-weight: 500;
+  font-family: var(--medium);
   font-size: 12px;
 }
 
 .basket {
-  font-weight: 400;
+  font-family: var(--regular);
 }
 
 .slider {
@@ -374,7 +407,7 @@ main {
 
 .discover h3 {
   font-size: 23px;
-  font-weight: bold;
+  font-family: var(--bold);
   text-align: center;
 }
 
@@ -452,7 +485,7 @@ main {
 
 .item .text h2 {
   font-size: 1em;
-  font-weight: 400;
+  font-family: var(--regular);
 }
 
 .item .text .price {
@@ -504,7 +537,7 @@ main {
 .opinion .user {
   margin-top: 10px;
   width: 100%;
-  font-weight: 700;
+  font-family: var(--bold);
 }
 
 .team {
@@ -565,7 +598,7 @@ footer .values .value {
   display: flex;
   align-items: center;
   font-size: 20px;
-  font-weight: 600;
+  font-family: var(--semibold);
 }
 
 footer .values .value img {
@@ -576,7 +609,7 @@ footer .values .value img {
 
 footer .values .value span {
   color: var(--low-red);
-  font-weight: 600;
+  font-family: var(--semibold);
 }
 
 footer .bottom-footer {
@@ -627,7 +660,7 @@ footer .newsletter .text {
 }
 
 footer h4 {
-  font-weight: 400;
+  font-family: var(--regular);
   font-size: 20px;
 }
 
@@ -850,7 +883,7 @@ footer .help .right-links a {
   }
   .links-highlight {
     color: var(--low-red);
-    font-weight: 700;
+    font-family: var(--bold);
   }
   .caroussel-buttons {
     height: 80px;
@@ -933,7 +966,7 @@ footer .help .right-links a {
   }
   .item .link-on-image:hover {
     opacity: 1;
-    background:#eeeeee;
+    background: #eeeeee;
     color: var(--low-red);
   }
   .items .content .ps {
@@ -999,7 +1032,7 @@ footer .help .right-links a {
     margin-bottom: 15px;
   }
   footer h4 {
-    font-weight: 400;
+    font-family: var(--bold);
     font-size: 26px;
   }
   footer .newsletter p {
