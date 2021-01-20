@@ -1,10 +1,11 @@
 const burger = document.getElementById("app-burger");
 const filter = document.getElementById("app-filter");
-const nextButton = document.getElementsByClassName("next-button")[0];
-const previousButton = document.getElementsByClassName("previous-button")[0];
-const slider = document.getElementsByClassName("content")[0];
-const linksSlider = slider.children;
-let sliderCounter = 0;
+// const nextButton = document.getElementsByClassName("next-button")[0];
+// const previousButton = document.getElementsByClassName("previous-button")[0];
+const slides = document.getElementsByClassName("content")[0];
+const linksSlides = slides.children;
+let numberOfLinksSlides = linksSlides.length;
+let sliderCounter = -1;
 
 // Event listener used to display the content of the burger menu
 // if the window is under 992px of width, we add the event listener 
@@ -21,9 +22,10 @@ window.addEventListener("resize", () => {
   burger.classList.remove("display");
 });
 
-nextButton.addEventListener("click", next);
-previousButton.addEventListener("click", previous)
+// nextButton.addEventListener("click", next);
+// previousButton.addEventListener("click", previous)
 
+setInterval(nextSlider, 5000);
 
 
 function displayMenu() {
@@ -31,16 +33,16 @@ function displayMenu() {
   filter.classList.toggle("display");
 }
 
-function next() {
+function nextSlider() {
   sliderCounter++;
-  updateSlider();
-}
-
-function previous() {
-  sliderCounter--;
+  if (sliderCounter > numberOfLinksSlides -1) {
+    sliderCounter = 0;
+  }
   updateSlider();
 }
 
 function updateSlider() {
     console.log(sliderCounter)
+  const transform = -100 * sliderCounter;
+  slides.style.transform = `translateX(${transform}vw)`;
 }

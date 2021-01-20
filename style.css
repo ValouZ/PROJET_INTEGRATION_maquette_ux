@@ -295,45 +295,24 @@ nav.user {
   background: var(--yellow);
   display: flex;
   align-items: center;
-  justify-content: center;
+  overflow: hidden;
 }
 
 .slider .content {
   height: 100%;
   display: flex;
   align-items: center;
-  width: fit-content;
+  width: 300vw;
   position: relative;
+  transition: 0.5s linear;
 }
 
-.slider .content .display {
+.slider .content .slide{
   padding: calc(calc(48px - 19px) / 2) 0;
-  margin: 0 20px;
-  display: initial;
-}
-
-.slider .content :not(.display) {
-  display: none;
-}
-
-.slider .content::before,
-.slider .content::after {
-  content: '';
-  background: center center no-repeat url(img/icon/slide-icon.svg);
-  height: 15px;
-  width: 15px;
-  position: absolute;
-  left: -20px;
-}
-
-.slider .content::after {
-  transform: rotateZ(180deg);
-  right: -20px;
-  left: unset;
-}
-
-.slider .content a {
+  display: flex;
+  justify-content: center;
   text-decoration: underline;
+  width: 100vw;
 }
 
 .caroussel {
@@ -764,6 +743,9 @@ footer .help .right-links a {
   .logo {
     left: calc(50% - calc(101px / 2));
   }
+  .slider .content .slide{
+    font-size: 18px;
+  }
   .caroussel {
     height: 400px;
   }
@@ -914,9 +896,8 @@ footer .help .right-links a {
     height: 40px;
   }
 
-  .slider .content .display{
-    padding: calc(calc(40px - 19px) / 2) 0;
-    margin: 0 40px;
+  .slider .content .slide{
+    padding: calc(calc(40px - 22px) / 2) 0;
   }
   .caroussel-buttons {
     height: 80px;
