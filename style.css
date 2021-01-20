@@ -373,6 +373,7 @@ nav.user {
   text-align: center;
   color: white;
   max-width: 455px;
+  font-weight: 400;
 }
 
 .caroussel-content .description span {
@@ -944,6 +945,12 @@ footer .help .right-links a {
     grid-column: 2 / span 1;
     grid-row: 1 / span 2;
   }
+  .blog h2,
+  .gift h2,
+  .demonstration h2 {
+    font-family: var(--bold);
+    font-size: inherit;
+  }
   .blog .link-on-image,
   .gift .link-on-image,
   .demonstration .link-on-image {
@@ -997,7 +1004,7 @@ footer .help .right-links a {
   .canvas {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0) 52.6%, #FFFFFF 100%), center center / cover url(img/desktop/canvas_desktop.jpg);
   }
-  .item .text{
+  .item .text {
     z-index: 2;
   }
   .item .text h2 {
@@ -1136,12 +1143,14 @@ footer .help .right-links a {
   }
 }
 
+
 /* center "Voir" button */
-@media only screen and (min-width: 1080px){
-  .item .link-on-image{
+
+@media only screen and (min-width: 1080px) {
+  .item .link-on-image {
     left: calc(50% - calc(120px / 2));
   }
-} 
+}
 
 
 /* Large Devices, Wide Screens */
