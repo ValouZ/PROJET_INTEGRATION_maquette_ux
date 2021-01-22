@@ -2,28 +2,28 @@
   font-family: "Dosis Regular";
   font-style: normal;
   font-weight: 400;
-  src: local("Dosis Regular"), url("fonts/Dosis-Regular.woff") format("woff");
+  src: local("Dosis Regular"), url("fonts/Dosis_Regular.woff") format("woff");
 }
 
 @font-face {
   font-family: "Dosis Medium";
   font-style: normal;
   font-weight: 500;
-  src: local("Dosis Medium"), url("fonts/Dosis-Medium.woff") format("woff");
+  src: local("Dosis Medium"), url("fonts/Dosis_Medium.woff") format("woff");
 }
 
 @font-face {
   font-family: "Dosis SemiBold";
   font-style: normal;
   font-weight: 600;
-  src: local("Dosis SemiBold"), url("fonts/Dosis-SemiBold.woff") format("woff");
+  src: local("Dosis SemiBold"), url("fonts/Dosis_SemiBold.woff") format("woff");
 }
 
 @font-face {
   font-family: "Dosis Bold";
   font-style: normal;
   font-weight: 700;
-  src: local("Dosis Bold"), url("fonts/Dosis-Bold.woff") format("woff");
+  src: local("Dosis Bold"), url("fonts/Dosis_Bold.woff") format("woff");
 }
 
 * {
