@@ -181,7 +181,6 @@ header {
   transition: 0.3s linear;
   transition-delay: 0.1s;
   transition-property: background, transform;
-  
 }
 
 .burger.display .icon::before {
@@ -278,7 +277,7 @@ nav ul li {
 }
 
 nav.user {
-  height: 36px;
+  height: 40px;
   width: 112px;
   display: flex;
   justify-content: space-between;
@@ -286,10 +285,17 @@ nav.user {
 
 .account,
 .basket {
+  max-height: 40px;
   display: flex;
   flex-direction: column;
+  align-items: center;
   font-family: var(--medium);
   font-size: 12px;
+}
+
+.account img,
+.basket img {
+  height: 25px;
 }
 
 .basket {
@@ -932,10 +938,11 @@ footer .help .right-links {
   .account,
   .basket {
     font-size: 15px;
+    max-height: 50px;
   }
   .account img,
   .basket img {
-    height: 30px;
+    height: 31px;
   }
   .links-highlight {
     color: var(--low-red);
