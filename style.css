@@ -326,6 +326,7 @@ nav.user {
   justify-content: center;
   text-decoration: underline;
   width: 100vw;
+  font-size: 15px;
 }
 
 .caroussel {
