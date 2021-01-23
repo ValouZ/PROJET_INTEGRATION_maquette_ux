@@ -29,7 +29,7 @@ nextButton.addEventListener("click", nextCarou);
 previousButton.addEventListener("click", prevCarou)
 
 setInterval(nextSlider, 5000);
-setInterval(nextCarou, 4000);
+let intervalCarou = setInterval(nextCarou, 4000);
 
 
 function displayMenu() {
@@ -69,6 +69,8 @@ function prevCarou() {
 function updateCarou() {
     const transform = -50 * carouCounter;
     carouSlides.style.transform = `translateX(${transform}%)`;
+    clearInterval(intervalCarou);
+    intervalCarou = setInterval(nextCarou, 4000);
 }
 
 // function swipedetect(el, callback){

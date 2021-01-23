@@ -53,6 +53,10 @@ main {
     --bold: "Dosis Bold", sans-serif;
 }
 
+button {
+    outline: none;
+}
+
 ul {
     list-style: none;
 }
@@ -382,6 +386,10 @@ nav.user {
 .caroussel-buttons .button {
     background: none;
     border: none;
+}
+
+.caroussel-buttons .button:hover path {
+    stroke: var(--low-red);
 }
 
 .slider-caroussel .description {
@@ -1007,10 +1015,6 @@ footer .help .right-links {
     .demonstration h2 {
         font-family: var(--bold);
         font-size: inherit;
-    }
-    .blog .link-on-image,
-    .gift .link-on-image,
-    .demonstration .link-on-image {
         position: absolute;
         bottom: 17px;
     }
